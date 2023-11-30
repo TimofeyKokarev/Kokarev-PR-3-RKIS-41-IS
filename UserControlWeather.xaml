@@ -5,48 +5,48 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Kokarev_PR3"
              xmlns:DataModel="clr-namespace:Kokarev_PR3.DataModel" x:Class="Kokarev_PR3.UserControlWeather"
-             mc:Ignorable="d" Loaded="UserControl_Loaded" Height="282" Width="237">
+             mc:Ignorable="d" Loaded="UserControl_Loaded" Height="377" Width="258">
     <UserControl.Resources>
         <CollectionViewSource x:Key="weatherViewSource" d:DesignSource="{d:DesignInstance {x:Type DataModel:Weather}}"/>
     </UserControl.Resources>
-    <Grid Background="White" DataContext="{StaticResource weatherViewSource}" Margin="0,0,-150,-154" HorizontalAlignment="Center" VerticalAlignment="Center" Width="367" Height="339">
+    <Grid Background="White" DataContext="{StaticResource weatherViewSource}" Margin="0,15,0,10" HorizontalAlignment="Center" Width="267">
         <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-            <Label Grid.Column="0" Content="Date:" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
-            <DatePicker x:Name="dateDatePicker" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" SelectedDate="{Binding Date, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="155" Margin="3,0,0,0"/>
+        <Label Grid.Column="0" Content="Date:" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
+        <DatePicker x:Name="dateDatePicker" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" SelectedDate="{Binding Date, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="155" Margin="3,0,0,0"/>
 
-            <Label Grid.Column="0" Content="Hours:" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
-            <TextBox x:Name="hoursTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3,0,0,0" Grid.Row="1" Text="{Binding Hours, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="155"/>
+        <Label Grid.Column="0" Content="Hours:" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+        <TextBox x:Name="hoursTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3,0,0,0" Grid.Row="1" Text="{Binding Hours, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="155"/>
 
-            <Label Grid.Column="0" Content="Humidity:" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
-            <TextBox x:Name="humidityTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3,0,0,0" Grid.Row="2" Text="{Binding Humidity, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="155"/>
+        <Label Grid.Column="0" Content="Humidity:" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
+        <TextBox x:Name="humidityTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3,0,0,0" Grid.Row="2" Text="{Binding Humidity, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="155"/>
 
-            <Label Grid.Column="0" Content="ID:" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="iDTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3,0,0,0" Text="{Binding ID, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="155"/>
+        <Label Grid.Column="0" Content="ID:" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="iDTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3,0,0,0" Text="{Binding ID, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="155"/>
 
-            <Label Grid.Column="0" Content="Name:" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
-            <TextBox x:Name="nameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3,0,0,0" Grid.Row="4" Text="{Binding Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="155"/>
+        <Label Grid.Column="0" Content="Name:" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
+        <TextBox x:Name="nameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3,0,0,0" Grid.Row="4" Text="{Binding Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="155"/>
 
-            <Label Grid.Column="0" Content="Photo:" HorizontalAlignment="Left" Margin="3" Grid.Row="7" VerticalAlignment="Center"/>
-            <Image x:Name="photoImage" Stretch="Fill" Grid.Column="1" Grid.Row="6" Source="{Binding Photo}" Margin="4,31,1,-80" Grid.RowSpan="2"/>
+        <Label Grid.Column="0" Content="Photo:" HorizontalAlignment="Left" Margin="3,0,0,91" Grid.Row="7" VerticalAlignment="Bottom"/>
+        <Image x:Name="photoImage" Stretch="Fill" Grid.Row="7" Source="{Binding Photo}" Margin="88,2,0,0" HorizontalAlignment="Left" Width="156" Height="110" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
 
-            <Label Grid.Column="0" Content="Temperature:" HorizontalAlignment="Left" Margin="3" Grid.Row="6" VerticalAlignment="Center"/>
-            <TextBox x:Name="temperatureTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3,0,0,0" Grid.Row="6" Text="{Binding Temperature, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="155"/>
+        <Label Grid.Column="0" Content="Temperature:" HorizontalAlignment="Left" Margin="3" Grid.Row="6" VerticalAlignment="Center"/>
+        <TextBox x:Name="temperatureTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3,0,0,0" Grid.Row="6" Text="{Binding Temperature, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="155"/>
 
-            <Label Grid.Column="0" Content="Type:" HorizontalAlignment="Left" Margin="3" Grid.Row="5" VerticalAlignment="Center"/>
+        <Label Grid.Column="0" Content="Type:" HorizontalAlignment="Left" Margin="3" Grid.Row="5" VerticalAlignment="Center"/>
         <TextBox x:Name="typeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3,0,0,0" Grid.Row="5" Text="{Binding Type, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="155"/>
     </Grid>
 </UserControl>
